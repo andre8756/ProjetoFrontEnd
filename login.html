@@ -8,8 +8,47 @@
     rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
+    <style>
+        body{
+            background-color: grey;
+        }
+        footer{
+            background-color: white;
+            padding: 100px;
+            border-radius: 20px;
+            font-family: 'Arial';
+        }
+        .outra{
+            background-color: rgb(231, 229, 229);
+        }
+    </style>
 </head>
 <body>
+    <div class="container mt-5">
+        <footer>
+            <form action="#" method="post">
+                <div>
+                    <h2 class="text-center">Login</h2>
+                    <label class="control-form mt-4">Informe seu Email:</label>
+                    <input class="form-control outra" type="email" placeholder="exemplo@gmai.com"/>
+    
+                    <label class="control-form mt-4">Informe sua senha:</label>
+                    <input class="form-control outra" type="password" placeholder="Senha forte"/>
+                </div>
+                
+                
+                <div class="mt-5">
+                    <label class="control-form">Confirme que você não é um robo:</label>
+                    <input type="checkbox"/>
+                </div>
+    
+                <div class="mt-5">
+                    <input class="btn btn-primary" type="submit" value="Salvar"/>
+                    <input class="btn btn-secondary" type="reset" value="Cancelar"/>
+                </div>
+            </form>
+        </footer>
+    </div>
     
 </body>
 </html>
