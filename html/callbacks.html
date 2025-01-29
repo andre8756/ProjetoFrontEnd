@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+
+    </label>
+    <p>
+
+    </p>
+    <button onclick="soma(10,20,mostrarParagrafo)">Mostrar em paragrafo</button>
+    <button onclick="soma(10,20,mostrarLabel)">Mostrar em label</button>
+    <button onclick="soma(10,20,mostrarAlert)">Mostrar em alert</button>
+
+    <script>
+        function mostrarParagrafo(valor){
+            document.querySelector('p').innerHTML = valor
+        }
+
+        function mostrarLabel(valor){
+            document.querySelector('label').innerHTML = valor
+        }
+
+        function mostrarAlert(valor){
+            alert(valor);
+        }
+
+        function soma(n1, n2, CallBack){
+            CallBack(n1+n2)
+        }
+
+    </script>
+</body>
+</html>
