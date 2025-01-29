@@ -5,11 +5,14 @@
     <title>Aula 1</title>
     <style>
         footer{
+            display: flex;
+            justify-content: center;
             background-color: aqua;
-            text-align: center;
             padding: 10px;
             border-radius: 20px;
             font-family: 'Arial';
+            padding: 100px;
+            border-radius: 20px;
         }
 
         a{
@@ -25,6 +28,60 @@
             border-bottom-left-radius: 10px;
             border-top-right-radius: 10px;
         }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            animation: move 2s infinite, fade 2s infinite;
+        }
+            @keyframes move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(200px); }
+        }
+            @keyframes fade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: lightcoral;
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+            text-align: center;
+            vertical-align: baseline;
+        }
+        @keyframes bounce {
+            0%, 100% {
+            transform: translateX(0);
+            }
+            50% {
+            transform: translateX(-50px);
+            }
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        .btn:hover {
+            background-color: lightcoral;
+        }
+            @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        
+        
 
     </style>
 </head>
@@ -36,6 +93,7 @@
         <a href="pagina1.html">pagina 1</a>
         <a href="pagina2.html"> Pagina 2</a>
         <a href="Pagina3.html"> Pagina 3</a>
+        <a href="pagina4.html"> Pagina 4</a>
     </nav>
     <hr />
     <p>
@@ -43,9 +101,16 @@
     </p>
 
     <footer>
-        <p>
+        <div class="box">
             direitos autorais reservados!
-        </p>
+        </div>
+        <div class="circle">
+            teste
+        </div>
+        <div class="btn">
+            teste2
+        </div>
+        
     </footer>
 
 </body>

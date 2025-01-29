@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+
+        .green{
+            background-color: green;
+        }
+    </style>
+    <script>
+        function Calcular(){
+            var inputCal = document.getElementsByTagName("input")[0]
+
+            if (inputCal.value == ''){
+                alert('Informe sua idade!')
+                inputCal.focus()
+                return
+            }
+
+            var pResultado = document.createElement('p')
+            var divResultado = document.getElementById("resultado")
+            console.log(divResultado)
+
+            if(inputCal.value < 18){
+                divResultado.setAttribute('class', 'red')
+                divResultado.innerHTML = 'Menor de idade'
+                pResultado.innerHTML = 'menor de idade'
+            } else{
+                divResultado.setAttribute('class', 'green')
+                divResultado.innerHTML = 'Maior de idade'
+                pResultado.innerHTML = 'maior de idade'
+            }
+            
+            divResultado.appendChild(pResultado)
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label>Calcular idade</label>
+        <input type="text">
+        <button onclick="Calcular()">Calcular</button>
+        <div id="resultado">
+
+        </div>
+    </div>
+</body>
+</html>
